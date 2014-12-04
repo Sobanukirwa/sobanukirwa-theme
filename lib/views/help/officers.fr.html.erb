@@ -1,0 +1,176 @@
+<% @title = "Information officer questions" %>
+
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip">
+  <h1 id="officers"><%= @title %> <a href="#officers">#</a> </h1>
+
+  <dl>
+
+  <dt id="top">I just got here from bottom of an ATI request, what is going on? <a href="#top">#</a> </dt>
+
+  <dd><p>Sobanukirwa is a service run by a civil society organisation to help ordinary members
+  of the public make access to information (ATI) requests, and easily track and share the responses.</p>
+
+  <p>The ATI request you received was made by someone using Sobanukirwa. You can
+  simply reply to the request as you would any other request from an individual.
+  The only difference is that your response will be automatically published on
+  the Internet.
+  </p>
+  <p>If you have privacy or other concerns, please read the answers below.
+  You might also like to read the <a
+  href="<%= help_about_path %>">introduction to Sobanukirwa</a> to find out more about what
+  the site does from the point of view of a user. You can also search the
+  site to find the authority that you work for, and view the status of
+  any requests made using the site.
+
+  <p>Finally, we welcome comments and
+  thoughts from information officers, please <a href="<%= help_contact_path %>">get in touch</a>.
+  </p>
+  </dd>
+
+  <dt id="responses">Why are you publishing responses to ATI requests? <a href="#responses">#</a> </dt>
+
+  <dd>We think there are lots of benefits. Most importantly it will encourage the
+  public to be more interested and involved in the work of government. We
+  also hope that it will reduce the number of duplicate requests on any
+  subject that a public body will receive. Given that access to information
+  responses contain public information, which anybody could easily request
+  again from the public authority, we think there should be no reason not to
+  publish it widely.
+  </dd>
+
+  <dt id="realpeople">Are the people making requests real people? <a href="#realpeople">#</a> </dt>
+
+  <dd>Yes. For the purposes of keeping track of responses we use
+  computer-generated email addresses for each request. However, before
+  they can send a request, each user must register on the site with a
+  unique email address that we then verify. You can search this site and
+  find a page listing all requests that each person has made.
+  </dd>
+
+  <dt id="email_only">An email isn't a sufficient address for an ATI request! <a href="#email_only">#</a> </dt>
+
+  <dd>Yes it is. Rwanda's 2013 access to information law states that information can "be requested by an individual or a group of persons 
+  in any of the official languages provided for by the Constitution of the Republic of Rwanda verbally, in writing, by telephone, internet 
+  or any other means of communication without prejudice to the provisions of this Law".
+  </dd>
+
+  <dt id="vexatious">Aren't you making lots of vexatious requests? <a href="#vexatious">#</a> </dt>
+
+  <dd><p>Sobanukirwa is not making any requests. We are sending requests on
+  behalf of our users, who are real people making the requests. </p>
+  <p>Look at it like this - if lots of different people made requests from
+  different Hotmail email addresses, then you would not think that Microsoft were
+  making vexatious requests. It is exactly the same if lots of requests are made
+  via Sobanukirwa. Moreover, since all requests are public it is much easier
+  for you to see if one of our users is making vexatious requests. </p>
+  </dd>
+
+  <dt id="spam_problems">I can see a request on Sobanukirwa, but we never got it by email!<a href="#spam_problems">#</a> </dt>
+
+  <dd><p>If a request appears on the site, then we have attempted to send it to
+  the authority by email. Any delivery failure messages will automatically
+  appear on the site. You can check the address we're using with the "View ATI
+  email address" link which appears on the page for the authority. <a
+  href="<%= help_contact_path %>">Contact us</a> if there is a better address we can
+  use.</p>
+  <p>Requests are sometimes not delivered because they are quietly removed by
+  "spam filters" in the IT department of the authority. Authorities can make
+  sure this doesn't happen by asking their IT departments to "whitelist"
+  any email from <strong>@sobanukirwa.rw</strong>.
+  If you <a href="<%= help_contact_path %>">ask us</a> we will resend any request,
+  and/or give technical details of delivery so an IT department can chase
+  up what happened to the message.
+  </p>
+  <p>Finally, you can respond to any request from your web browser, without
+  needing any email, using the "respond to request" link at the bottom of
+  each request page.
+  </dd>
+
+  <dt id="days">How do you calculate the deadline shown on request pages?<a href="#days">#</a> </dt>
+
+  <dd>
+  <p>The access to information law says:</p>
+
+  <blockquote><p>An information officer shall make a decision on a request for information as 
+  soon as possible. However, the time limit shall not exceed three working (3) days from the 
+  date of receipt of the application.</blockquote>
+  
+  <p>However, the time may be shortened as follows:</p>
+  
+  <p>1° where the information sought concerns the life or liberty of a person, the information 
+  shall be provided within twenty-four (24) hours from the receipt of the request;</p>
+
+  <p>2° where the information is sought by a journalist for the purposes of news gathering, the 
+  information shall be provided within two (2) days from the receipt of the request.</p>
+  
+  <p>If the information officer wants an extension of the period of time, the law states that "an 
+  information officer shall request to the competent organ the extension of the time limit for the 
+  provision of information in any of the official languages verbally, in writing and any other means 
+  of technology without prejudice to the provisions of Laws".
+  </p>
+  
+  <p>The full text of the law can be found in <a href="http://www.primature.gov.rw/index.php?eID=tx_mm_bccmsbase_zip&id=803869345476cde5d502d">official Gazette no 10 of 11.03.2013</a> 
+  on the website of the Office of the Prime Minister.
+  </p>
+  
+  </dd>
+
+  <dt id="days2">But really, how do you calculate the deadline?<a href="#days2">#</a> </dt>
+
+  <dd>
+
+  <p>Please read the answer to the previous question first. Legally, authorities
+  must respond <strong>promptly</strong> to ATI requests. If they fail to do that,
+  it is best if they show the hard work they are doing by explaining what is
+  taking the extra time to do.
+  </p>
+
+  </dd>
+
+  <dt id="large_file">How can I send a large file, which won't go by email?<a href="#large_file">#</a> </dt>
+
+  <dd>Instead of email, you can respond to a request directly from your web
+  browser, including uploading a file. To do this, choose "respond to request" at
+  the bottom of the request's page. <a href="<%= help_contact_path %>">Contact us</a> if it
+  is too big for even that (more than, say, 50Mb).
+  </dd>
+
+  <dt id="names">Why do you publish the names of civil servants and the text of emails? <a href="#names">#</a> </dt>
+
+  <dd>We consider what officers or servants do in the course of their employment
+  to be public information. We will only remove content in exceptional
+  circumstances, see our <a href="<%= help_privacy_path(:anchor => 'takedown') %>">take down policy</a>.
+  </dd>
+
+  <dt id="mobiles">Do you publish email addresses or mobile phone numbers? <a href="#mobiles">#</a> </dt>
+
+  <dd><p>To prevent spam, we automatically remove most emails and some mobile numbers from
+  responses to requests.  Please <a href="<%= help_contact_path %>">contact us</a> if we've
+  missed one.
+  For technical reasons we don't always remove them from attachments, such as certain PDFs.</p>
+  <p>If you need to know what an address was that we've removed, please <a
+    href="<%= help_contact_path %>">get in touch with us</a>. Occasionally, an email address
+  forms an important part of a response and we will post it up in an obscured
+  form in an annotation.
+  </dd>
+
+  <dt id="copyright"><a id="commercial"></a>What is your policy on copyright of documents?<a href="#copyright">#</a> </dt>
+
+  <dd>The access to information law is "applicant blind", so anyone in the
+  world can request the same document and get a copy of it.
+
+  If you think our making a document available on the internet infringes your
+  copyright, you may <a href="<%= help_contact_path %>">contact us</a> and ask us
+  to take it down.  However, to save tax payers' money by preventing duplicate
+  requests, and for good public relations, we'd advise you not to do that.
+  </dd>
+
+  </dl>
+
+  <p><strong>If you haven't already</strong>, read <a href="<%= help_about_path %>">the introduction</a> --&gt;
+  <br><strong>Otherwise</strong>, the <a href="<%= help_credits_path %>">credits</a> or the <a href="<%= help_api_path %>">programmers API</a> --&gt;
+
+  <div id="hash_link_padding"></div>
+</div>
