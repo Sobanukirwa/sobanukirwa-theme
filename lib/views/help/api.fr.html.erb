@@ -7,66 +7,67 @@
   <dl>
     <dt>Introduction</dt>
     <dd>
-      <p>This page explains how programmers can make other websites and software
-      interact with Sobanukirwa via an "API".
-      </p>
+      <p>Cette page explique la façon dont les programmeurs peuvent faire en sorte que d’autres sites web ou des 
+logiciels interagissent avec Sobanukirwa via une "API".</p>
 
-      <p>Sobanukirwa does not have a full API yet, but we are gradually adding
-      lots of things that are similar in use to an API as they are requested.
-      </p>
+      <p>Sobanukirwa n’a pas encore une API complète, mais nous ajoutons graduellement des outils qui sont similaires
+      à une API.</p>
     </dd>
 
-    <dt>Linking to new requests</dt>
+    <dt>Lier les nouvelles requêtes</dt>
     <dd>
-      <p>To encourage your users to make links to a particular public authority, use URLs of the form
+      <p>Pour encourager vos utilisateurs à mettre des liens vers un organisme public en particulier, nous 
+      proposons des URL avec une forme prédéfinie.
       <%= link_to new_request_to_body_path(:url_name => "minagri") , new_request_to_body_path(:url_name => "minagri") %>.
-      These are the parameters you can add to those URLs, either in the URL or from a form.
-
-      <ul>
-          <li> <strong>title</strong> - default summary of the new request.</li>
-          <li> <strong>default_letter</strong> - default text of the body of the letter. The salutation (Dear...) and signoff (Yours...) are wrapped round this. </li>
-          <li> <strong>body</strong> - as an alternative to default_letter, this sets the default entire text of the request, so you can customise the salutation and signoff. </li>
-          <li> <strong>tags</strong> - space separated list of tags, so you can find and link up any requests made later, e.g. <em>openlylocal spending_id:12345</em>. The : indicates it is a machine tag. The values of machine tags may also include colons, useful for URIs.
+      Voici les paramètres que vous pouvez ajouter à ces URL, que ce soit dans l’URL ou d’un formulaire.
+<ul>
+          <li> <strong>title</strong> - résumé par défaut de la nouvelle requête.</li>
+          <li> <strong>default_letter</strong> - le texte par défaut du corps de votre lettre. La salutation (Cher...) et 
+    la signature (Sincèrement…) en sont les limites </li>
+          <li> <strong>body</strong> - en tant qu’alternative à default_letter, cette option choisit le 
+          texte par défaut pour la demande, afin que vous puissiez personnaliser la salutation et la signature.</li>
+          <li> <strong>tags</strong> - une liste de tags séparés d’une espace, afin que vous puissiez trouver ou lier des 
+          requêtes, par exemple openlylocal spending_id:12345. Le deux-points indique qu’il s’agit d’un « machine tag »
       </ul>
     </dd>
 
-    <dt>RSS (actually, Atom) feeds</dt>
+    <dt>Flux RSS (Atom pour être précis)</dt>
     <dd>
-      <p>There are Atom feeds on most pages which list ATI requests, which you can
-      use to get updates and links in XML format. Find the URL of the Atom feed in
-      one of these ways:
+      <p>Il y a des flux Atom sur la plupart des pages qui listent des demandes d’accès à l’information. Vous pouvez les 
+utiliser pour avoir des mises à jour et des liens en format XML. Il y a plusieurs façons de trouver l’URL du flux Atom.
       <ul>
-          <li>Look for the <%= image_tag "feed-16.png", :alt => "RSS icon" %> RSS feed links.</li>
-          <li>Examine the <code>&lt;link rel="alternate" type="application/atom+xml"&gt;</code> tag in the head of the HTML. </li>
-          <li>Add <code>/feed</code> to the start of another URL.
-      </ul>
+          <li>Rechercher <%= image_tag "feed-16.png", :alt => "RSS icon" %> pour les liens.</li>
+          <li>Examiner le tag<code>&lt;link rel="alternate" type="application/atom+xml"&gt;</code> en tête du HTML. 
+            
+          </li>
+          <li>Ajouter<code>/feed</code>au début d’un autre URL.      </ul>
 
-      <p>In particular, even complicated search queries have Atom feeds.
-      You can do all sorts of things with them, such as query by authority, by file
-      type, by date range, or by status. See the <a href="<%= advanced_search_path %>">advanced search
-      tips</a> for details.
+      <p>
+      Même les recherches compliquées ont des flux Atom. Vous pouvez les utiliser de plusieurs façons différentes, comme une 
+recherche par type de fichier, par date ou par statut.
+      Voir <a href="<%= advanced_search_path %>"> pour des recherches avanceés</a>et details.
     </dd>
 
-    <dt>JSON structured data</dt>
+    <dt>Données JSON</dt>
     <dd>
-      <p>Quite a few pages have JSON versions, which let you download information about
-      objects in a structured form. Find them by:
+      <p>Plusieurs pages ont des versions JSON qui vous permettent de télécharger de l’information au sujet d’objets dans un 
+formulaire. Vous pouvez les trouver en:
       </p>
       <ul>
-          <li>Adding <code>.json</code> to the end of the URL. </li>
-          <li>Look for the <code>&lt;link rel="alternate" type="application/json"&gt;</code> tag in the head of the HTML. </li>
+          <li>Ajoutant<code>.json</code> à la fin de l’URL. </li>
+          <li>Recherchant le tag<code>&lt;link rel="alternate" type="application/json"&gt;</code> au début du HTML.</li>
       </ul>
 
-      <p>Requests, users and authorities all have JSON versions containing basic
-      information about them. Every Atom feed has a JSON equivalent, containing
-      information about the list of events in the feed.
+      <p>Les demandes, les utilisateurs et les autorités ont toutes des versions JSON qui contiennent l’information de base
+      à leur sujet. Chaque flux Atom a un équivalent JSON qui contient l’information au sujet de la liste des événements du 
+      flux.
       </p>
     </dd>
 
-    <dt>Spreadsheet of all authorities</dt>
+    <dt>Tableau de tous les organismes</dt>
     <dd>
       <p>
-      A spreadsheet file listing every body in Sobanukirwa is available:
+      Un fichier de type tableur fait la liste de tous les organismes accessibles à travers Sobanukirwa:
       <%= link_to "all-authorities.csv", all_public_bodies_csv_path %>
       </p>
 
@@ -76,13 +77,17 @@
   <dt> 5. Write API </dt>
   <dd>
       <p>
-      The write API is designed to be used by authorities to create their own requests in the system. The API is currently used by mySociety's <a href="https://github.com/mysociety/foi-register">FOI Register software</a> to support using Alaveteli as a disclosure log for all FOI activity at a particular public body. More technical information about the write API is available on the <a href="https://github.com/mysociety/alaveteli/wiki/API#write-api">Alaveteli wiki</a>.
+      The write API is designed to be used by authorities to create their own requests in the system. The API is currently
+      used by mySociety's <a href="https://github.com/mysociety/foi-register">FOI Register software</a> to support using 
+      Alaveteli as a disclosure log for all FOI activity at a particular public body. More technical information about the 
+      write API is available on the <a href="https://github.com/mysociety/alaveteli/wiki/API#write-api">Alaveteli wiki</a>.
       </p>
   </dd>
 </dl>
 
-  <p>Please <a href="<%= help_contact_path %>">contact us</a> if you need an API feature that isn't there yet. It's
-  very much a work in progress, and we do add things when people ask us to.</p>
+  <p>Merci de nous contacter <a href="<%= help_contact_path %>">contact us</a>si vous avez besoin d’une option API qui n’est 
+  pas encore disponible. Nous sommes encore en train de perfectionner l’outil, et il nous fait plaisir d’ajouter ce que l’on
+  nous demande. .</p>
 
   <div id="hash_link_padding"></div>
 </div>
