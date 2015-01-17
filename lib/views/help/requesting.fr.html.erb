@@ -1,65 +1,65 @@
-<% @title = "Making requests" %>
+<% @title = "Faire une demande d'accès" %>
 
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip">
   <h1 id="making_requests"><%= @title %></h1>
   <dl>
 
-  <dt id="which_authority">I'm not sure which authority to make my request to, how can I find out? <a href="#which_authority">#</a> </dt>
-
+  <dt id="which_authority">Je ne suis pas sûr de l'autorité qui doit traiter ma demande,comment puis-je faire? 
+  <a href="#which_authority">#</a> </dt>
+  
   <dd>
-  <p>It can be hard to untangle government's complicated structured, and work out
-  who knows the information that you want. Here are a few tips:
+  <p>
+  Il peut être difficile de démêler les différents palliers et structures du gouvernement, et comprendre qui 
+  a l’information que vous recherchez. Voici quelques piste:
   <ul>
-  <li>Browse or search Sobanukirwa looking for similar requests to yours.</li>
-  <li>When you've found an authority you think might have the information, use
-  the "home page" link on the right hand side of their page to check what they do
-  on their website.</li>
-  <li>Contact the authority by phone or email to ask if they hold the kind of
-  information you're after.</li>
-  <li>Don't worry excessively about getting the right authority. If you get it
-  wrong, they ought to advise you who to make the request to instead.
-  </li>
-  <li>If you've got a thorny case, please <a href="<%= help_contact_path %>">contact us</a> for help.</li>
+  <li>Furetez ou effectuez une recherche sur Sobanukirwa pour voir si des requêtes similaires ont été faites.</li>
+  <li>Quand vous avez trouvé un organisme qui pourrait détenir l’information recherchée, utilisez le bouton ‘site web’ 
+  du côté droit de leur page et vérifiez leurs activités.</li>
+  <li>Contactez l'organisme en question par téléphone ou par courriel pour demander s'il possède le type d’information que 
+vous cherchez. Habituellement, un contact préalable vous permet aussi de faire une demande plus ciblée.</li>
+<li>Ne vous inquiétez pas si vous ne trouvez pas le bon organisme du premier coup; ceux que vous contacterez sauront vous 
+rediriger pour votre deuxième recherche.</li>
+
+  <li>Si votre cas est compliqué, veuillez <a href="<%= help_contact_path %>">nous contacter</a> for help.</li>
   </ul>
 
   </dd>
 
 
 
-  <dt id="missing_body">You're missing the public authority that I want to request from! <a href="#missing_body">#</a> </dt>
+  <dt id="missing_body">Il vous manque l'autorité publique que j'aimerai contacter<a href="#missing_body">#</a> </dt>
 
   <dd>
-  <p>Please <a href="<%= new_change_request_path %>">contact us</a> with the name of the public authority and,
-  if you can find it, their contact email address for access to information requests.
+  <p>Veuillez<a href="<%= new_change_request_path %>">nous contacter</a> avec le nom de l'autorité publique ainsi que
+  leur adresse e-mail utilisé pour répondre aux demandes d'accès a l'information
+  
   </p>
-  <p>If you'd like to help add a whole category of public authority to the site, we'd love
-  to hear from you too.
+  <p>Si vous souhaitez nous aider à ajouter une catégorie entière de l'autorité publique sur le site, contactez nous.
   </p>
 
   </dd>
 
-  <dt id="focused">Why must I keep my request focused?<a href="#focused">#</a> </dt>
+  <dt id="focused">Pourquoi ma demande doit-elle être ciblée et concise?<a href="#focused">#</a> </dt>
 
   <dd>
 
-  <p>
-  Please put in your request only what is needed so that someone can
-  easily identify what information you are asking for. Please do
-  <i>not</i> include any of the following:
+  <p>S'il vous plaît mentionez ce qui est nécessaire seulement pour que quelqu'un puisse 
+  identifier facilement les informations que vous demandez.
+  Merci de <i>n’inclure aucun</i> des éléments suivants:
   </p>
 
   <ul>
-  <li>arguments about your cause</li>
-  <li>statements that could defame or insult others</li>
+  <li>arguments en faveur de votre cause;</li>
+  <li>affirmations diffamatoires ou insultes;</li>
+  <li>demandes de commentaires.</li>
   </ul>
 
   <p>
-  If you do, we may have to remove your request to avoid problems with
-  libel law, which is a pain for both you and us. Short, succinct messages
-  make it easier for authorities to be clear what information you are
-  requesting, which means you will get a reply more quickly.
-  </p>
+  Si vous incluez de tels éléments, notamment des propos diffamatoires ou offensants, nous pourrions avoir à retirer 
+  votre requête afin d’éviter des problèmes légaux, ce qui ne vous servira pas et entraînera des problèmes de notre 
+  côté également. Des messages courts et directs clarifieront votre requête et permettront aux responsable d'accès aux
+  documents de repérer l’information que vous rechercher, réduisant ainsi le temps d’attente.</p>
 
   <p>
   If you want information to support an argument or campaign, access to information is a powerful tool. 
