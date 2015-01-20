@@ -1,0 +1,184 @@
+<% @title = "Making requests" %>
+
+<%= render :partial => 'sidebar' %>
+<div id="left_column_flip">
+  <h1 id="making_requests"><%= @title %></h1>
+  <dl>
+
+  <dt id="which_authority">I'm not sure which authority to make my request to, how can I find out? <a href="#which_authority">#</a> </dt>
+
+  <dd>
+  <p>It can be hard to untangle government's complicated structured, and work out
+  who knows the information that you want. Here are a few tips:
+  <ul>
+  <li>Browse or search Sobanukirwa looking for similar requests to yours.</li>
+  <li>When you've found an authority you think might have the information, use
+  the "home page" link on the right hand side of their page to check what they do
+  on their website.</li>
+  <li>Contact the authority by phone or email to ask if they hold the kind of
+  information you're after.</li>
+  <li>Don't worry excessively about getting the right authority. If you get it
+  wrong, they ought to advise you who to make the request to instead.
+  </li>
+  <li>If you've got a thorny case, please <a href="<%= help_contact_path %>">contact us</a> for help.</li>
+  </ul>
+
+  </dd>
+
+
+
+  <dt id="missing_body">You're missing the public authority that I want to request from! <a href="#missing_body">#</a> </dt>
+
+  <dd>
+  <p>Please <a href="<%= new_change_request_path %>">contact us</a> with the name of the public authority and,
+  if you can find it, their contact email address for access to information requests.
+  </p>
+  <p>If you'd like to help add a whole category of public authority to the site, we'd love
+  to hear from you too.
+  </p>
+
+  </dd>
+
+  <dt id="focused">Why must I keep my request focused?<a href="#focused">#</a> </dt>
+
+  <dd>
+
+  <p>
+  Please put in your request only what is needed so that someone can
+  easily identify what information you are asking for. Please do
+  <i>not</i> include any of the following:
+  </p>
+
+  <ul>
+  <li>arguments about your cause</li>
+  <li>statements that could defame or insult others</li>
+  </ul>
+
+  <p>
+  If you do, we may have to remove your request to avoid problems with
+  libel law, which is a pain for both you and us. Short, succinct messages
+  make it easier for authorities to be clear what information you are
+  requesting, which means you will get a reply more quickly.
+  </p>
+
+  <p>
+  If you want information to support an argument or campaign, access to information is a powerful tool. 
+  Although you may not use this site to run your campaign, we encourage you to use it to get the 
+  information you need. We also encourage to run your campaign elsewhere - one effective
+  and very easy way is to <%= link_to 'start your own blog',
+  "http://wordpress.com/"%>. You are welcome to link to your campaign
+  from this site in an annotation to your request (you can make
+  annotations after submitting the request).
+  </p>
+
+  </dd>
+
+  <dt id="fees">Does it cost me anything to make a request?<a href="#fees">#</a> </dt>
+
+  <dd>
+
+  <p>Making an ATI request is nearly always free. The ministerial orders state that "the provision of the 
+  information shall be free of charge" but they also state that "charges for making copies or sending information 
+  may be charged to the applicant" if the applicant does not "bring necessary equipment or tools to collect 
+  the required information".</p>
+
+  </dd>
+
+
+
+  <dt id="quickly_response">How quickly will I get a response? <a href="#quickly_response">#</a> </dt>
+
+  <dd>
+  <p>By law, public authorities must respond <strong>promptly</strong> to
+  requests, normally within <strong>three days</strong>.
+  </p>
+
+  <p>Sobanukirwa will email you if you don't get a timely response.  You can
+  then send the public authority a message to remind them, and tell them if they
+  are breaking the law.</p>
+
+  </dd>
+
+  <dt id="no_response">What if I never get a response?<a href="#no_response">#</a> </dt>
+
+  <dd>
+  <p>There are several things you can do if you never get a response.</p>
+  <ul>
+      <li>Sometimes there has been a genuine problem and the authority never
+      received the request. It is worth telephoning the authority and politely
+      checking that they received the request. It was sent to them by email.
+      </li>
+      <li>If they have not received it, the problem is most likely due to
+      "spam filters". Refer the authority to the measures in the answer
+      '<a href="<%= help_officers_path(:anchor => 'spam_problems') %>">I can see a request on Sobanukirwa, but we never got it by email!</a>'
+      in the information officers section of this help.
+      </li>
+      <li>If you're still having no luck, then you can complain to the <a href="http://www.ombudsman.gov.rw/?How-to-complain">Office of the Ombudsman</a> about the authority.
+      Read our page '<a href="<%= help_general_path(:action => 'unhappy') %>">Unhappy about the response you got?</a>'.
+  </ul>
+  </dd>
+
+  <dt id="not_satifised">What if I'm not satisfied with the response? <a href="#not_satifised">#</a> </dt>
+  <dd>If you didn't get the information you asked for, or you didn't get it in time,
+  then read our page '<a href="<%= help_general_path(:action => 'unhappy') %>">Unhappy about the response you got?</a>'.
+  </dd>
+
+  <dt id="data_protection">Can I request information about myself? <a href="#data_protection">#</a> </dt>
+
+  <dd>
+  <p>No. Requests made using Sobanukirwa are public, made under the access to information law, 
+  and cannot help you find information about a private individual.</p>
+
+  <p>If you see that somebody has included personal information, perhaps
+  unwittingly, in a request, please <a href="<%= help_contact_path %>">contact us</a>
+  immediately so we can remove it.</p>
+  </dd>
+
+
+  <dt id="private_requests">I'd like to keep my request secret! (At least until I publish my story) <a href="#private_requests">#</a> </dt>
+
+  <dd><p>Sobanukirwa is currently only designed for public requests. All
+  responses that we receive are automatically published on the website for anyone
+  to read.  </p>
+  <p>You should contact the public authority directly if you would like to
+  make a request in private.  If you're interested in buying a system which helps
+  you manage information requests in secret, then <a href="<%= help_contact_path %>">contact us</a>.
+  </p>
+  </dd>
+
+  <dt id="multiple">Can I make the same request to lots of authorities, e.g. all sectors? <a href="#multiple">#</a> </dt>
+
+  <dd>We ask you to first send a test version of your request to a few
+  authorities. Their responses will help you improve the wording of your request,
+  so that you get the best information when you send the request to all of
+  the authorities. There is currently no automated system for sending the request
+  to the other authorities, you must copy and paste it by hand.
+
+  </dd>
+
+  <dt id="offsite">I made a request off the site, how do I upload it to the archive?<a href="#offsite">#</a> </dt>
+
+  <dd>Sobanukirwa is an archive of requests made through the site,
+  and does not try to be an archive of all ATI requests. We'll never support uploading
+  other requests. For one thing, we wouldn't be able to verify that other
+  responses actually came from the authority. If this really matters to you,
+  you can always make the same request again via Sobanukirwa.
+  </dd>
+
+  <dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a> </dt>
+
+  <dd>
+  <p>Annotations on Sobanukirwa are to help
+  people get the information they want, or to give them pointers to places they
+  can go to help them act on it. We reserve the right to remove anything else.
+  </p>
+  <p>Endless, political discussions are not allowed.
+  Post a link to a suitable forum or campaign site elsewhere.</p>
+  <dd>
+
+  </dl>
+
+  <p><strong>Next</strong>, read about <a href="<%= help_privacy_path %>">your privacy</a> --&gt;
+
+  <div id="hash_link_padding"></div>
+</div>
