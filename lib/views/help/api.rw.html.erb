@@ -1,88 +1,88 @@
-<% @title = "About our API" %>
+<% @title = "Ibijyanye na API yacu" %>
 
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip">
   <h1><%=@title %></h1>
   <dl>
-    <dt>Introduction</dt>
+    <dt>Ijambo ry’ibanze</dt>
     <dd>
-      <p>This page explains how programmers can make other websites and software
-      interact with Sobanukirwa via an "API".
+      <p>Iyi paji isobanura uburyo abakora imbuga za interineti bashobora guhuza Sobanukirwa n’izindi 
+      mbuga ndetse n’izindi software binyuze muri “API”.
       </p>
 
-      <p>Sobanukirwa does not have a full API yet, but we are gradually adding
-      lots of things that are similar in use to an API as they are requested.
+      <p>Sobanukirwa ntiragira API yuzuye, ariko tugenda twongeraho ibintu byinshi bishobora 
+      gukoreshwa nka API iyo bisabwe.
       </p>
     </dd>
 
-    <dt>Linking to new requests</dt>
+    <dt>Gusanisha n’ibibazo bishya</dt>
     <dd>
-      <p>To encourage your users to make links to a particular public authority, use URLs of the form
+      <p>Kugirango ushishikarize abakoresha urubuga rwawe kwihuza n’umuyobozi runaka, koresha URLs ziri ku ifishi 
       <%= link_to new_request_to_body_path(:url_name => "minagri") , new_request_to_body_path(:url_name => "minagri") %>.
-      These are the parameters you can add to those URLs, either in the URL or from a form.
+      Izi ni ingingo ushobora kongera kuri izo URLs, haba kuri URL cyangwa ubikuye mu ifishi.
 
       <ul>
-          <li> <strong>title</strong> - default summary of the new request.</li>
-          <li> <strong>default_letter</strong> - default text of the body of the letter. The salutation (Dear...) and signoff (Yours...) are wrapped round this. </li>
-          <li> <strong>body</strong> - as an alternative to default_letter, this sets the default entire text of the request, so you can customise the salutation and signoff. </li>
-          <li> <strong>tags</strong> - space separated list of tags, so you can find and link up any requests made later, e.g. <em>openlylocal spending_id:12345</em>. The : indicates it is a machine tag. The values of machine tags may also include colons, useful for URIs.
+          <li> <strong>Umutwe</strong> - incamake y’ikibazo gishya.</li>
+          <li> <strong>Ibarwa</strong> - umwandiko w’ibarwa. Gusuhuza (Nyakubahwa….) no gusezera (Murakoze) biba biri kumwe n’ibi. </li>
+          <li> <strong>Igihimba</strong> - mu gusimbura ibarwa, iyi yo igaragaza ikibazo cyose uko cyanditswe ku buryo ushobora gusuhuza no gusezera ukoresheje amagambo yawe. </li>
+          <li> <strong>Utumenyetso</strong> - urutonde rw’utumenyetso dutandukanyijwe n’umwanya, ku buryo ushobora kubona no kwisanisha ku bibazo byabajijwe nyuma, urugero: <em>openlylocal spending_id:12345</em>. Utu: tugaragaza ko ari utumenyetso tw’imashini. Utumenyetso tw’imashini dushobora no kuba turimo utwitso, twifashishwa muri URIs.
       </ul>
     </dd>
 
-    <dt>RSS (actually, Atom) feeds</dt>
+    <dt>Urwungano (arirwo Atom) RSS</dt>
     <dd>
-      <p>There are Atom feeds on most pages which list ATI requests, which you can
-      use to get updates and links in XML format. Find the URL of the Atom feed in
-      one of these ways:
+      <p>Hari urwungano Atom kuri paji nyinshi zishyiraho ibibazo by’ubwisanzure bwo kumenya amakuru, ushobora gukoresha ushaka amavugurura n’amahuriro , muri XML. 
+      Shaka URL y’urwungano Atom ukoresheje  bumwe muri ubu buryo: 
       <ul>
-          <li>Look for the <%= image_tag "feed-16.png", :alt => "RSS icon" %> RSS feed links.</li>
-          <li>Examine the <code>&lt;link rel="alternate" type="application/atom+xml"&gt;</code> tag in the head of the HTML. </li>
-          <li>Add <code>/feed</code> to the start of another URL.
+          <li>Shaka <%= image_tag "feed-16.png", :alt => "RSS icon" %> ihuriro ry’urwungano RSS.</li>
+          <li>Genzura <code>&lt;link rel="alternate" type="application/atom+xml"&gt;</code> ku mutwe wa HTML. </li>
+          <li>Ongera <code>/feed</code> ku ntangiriro y’indi URL.
       </ul>
 
-      <p>In particular, even complicated search queries have Atom feeds.
-      You can do all sorts of things with them, such as query by authority, by file
-      type, by date range, or by status. See the <a href="<%= advanced_search_path %>">advanced search
-      tips</a> for details.
+      <p>By’umwihariko, n’amashakiro agoye afite urwungano Atom. Ushobora gukora ibintu byose uzikoresheje, 
+      nko gushaka ukurikije abayobozi, ubwoko bw’inyandiko, amatariki, cyangwa irangamimerere. 
+      Ku bindi bisobanuro reba <a href="<%= advanced_search_path %>">Uburyo bwo gushaka byimbitse</a>.
     </dd>
 
-    <dt>JSON structured data</dt>
+    <dt>Dosiye itunganyije ya JSON </dt>
     <dd>
-      <p>Quite a few pages have JSON versions, which let you download information about
-      objects in a structured form. Find them by:
+      <p>Amapaji menshi agira inyandiko za JSON, zigufasha kubika amakuru y’ibintu ari ku murongo. 
+      Zishake ukoresheje:
       </p>
       <ul>
-          <li>Adding <code>.json</code> to the end of the URL. </li>
-          <li>Look for the <code>&lt;link rel="alternate" type="application/json"&gt;</code> tag in the head of the HTML. </li>
+          <li>Kwongera <code>.json</code> ku musozo wa URL. </li>
+          <li>Shaka akamenyetso ka <code>&lt;link rel="alternate" type="application/json"&gt;</code> mu mutwe wa HTML. </li>
       </ul>
 
-      <p>Requests, users and authorities all have JSON versions containing basic
-      information about them. Every Atom feed has a JSON equivalent, containing
-      information about the list of events in the feed.
+      <p>Ibibazo, abakoresha urubuga n’abayobozi bose bagira inyandiko za JSON zirimo amakuru y’ingenzi 
+      aberekeyeho. Buri rwungano Atom rugira JSON bihuye irimo amakuru ku rutonde rw’ibintu byakorewe muri 
+      urwo rwungano.
       </p>
     </dd>
 
-    <dt>Spreadsheet of all authorities</dt>
+    <dt>Urutonde rw’abayobozi bose</dt>
     <dd>
       <p>
-      A spreadsheet file listing every body in Sobanukirwa is available:
+      Urutonde ruriho abantu bose bakoresha Sobanukirwa ruboneka:
       <%= link_to "all-authorities.csv", all_public_bodies_csv_path %>
       </p>
 
     </dd>
 
 
-  <dt> 5. Write API </dt>
+  <dt>Andika API </dt>
   <dd>
       <p>
-      The write API is designed to be used by authorities to create their own requests in the system. The API is currently used by mySociety's <a href="https://github.com/mysociety/foi-register">FOI Register software</a> to support using Alaveteli as a disclosure log for all FOI activity at a particular public body. More technical information about the write API is available on the <a href="https://github.com/mysociety/alaveteli/wiki/API#write-api">Alaveteli wiki</a>.
+     Andika API yashyizweho kugirango ikoreshwe n’abayobozi mu gutanga ibibazo byabo. API ikoreshwa na software ya <a href="https://github.com/mysociety/foi-register">FOI Register software</a> ya mySociety mu gukoresha Alaveteli 
+     kugirango igaragaze ibyanditswe mu bikorwa by’ubwisanzure bwo kumenya amakuru byandikiwe umuyobozi runaka. 
+     Ibindi bisobanuro bya tekinike bijyanye na Andika API wabisanga kuri <a href="https://github.com/mysociety/alaveteli/wiki/API#write-api">Alaveteli wiki</a>.
       </p>
   </dd>
 </dl>
 
-  <p>Please <a href="<%= help_contact_path %>">contact us</a> if you need an API feature that isn't there yet. It's
-  very much a work in progress, and we do add things when people ask us to.</p>
+  <p>Ushobora <a href="<%= help_contact_path %>">kutwandikira</a> niba wifuza ikindi kimenyetso cya API kitari aha. 
+  Turacyari kwaguka, kandi tugenda twongeraho ibindi bintu iyo babidusabye.</p>
 
   <div id="hash_link_padding"></div>
 </div>
