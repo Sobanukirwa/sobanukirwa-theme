@@ -1,184 +1,138 @@
-<% @title = "Making requests" %>
+<% @title = "Kubaza ibibazo" %>
 
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip">
   <h1 id="making_requests"><%= @title %></h1>
   <dl>
 
-  <dt id="which_authority">I'm not sure which authority to make my request to, how can I find out? <a href="#which_authority">#</a> </dt>
+  <dt id="which_authority">Sinzi umuyobozi nabaza ikibazo cyanjye, ni gute namenya uwo mbaza? <a href="#which_authority">#</a> </dt>
 
   <dd>
-  <p>It can be hard to untangle government's complicated structured, and work out
-  who knows the information that you want. Here are a few tips:
+  <p>Bijya bigorana kumenya imikorere ya Leta, no kumenya uwo ubaza amakuru wifuza kumenya. Hano hari ibyagufasha:
   <ul>
-  <li>Browse or search Sobanukirwa looking for similar requests to yours.</li>
-  <li>When you've found an authority you think might have the information, use
-  the "home page" link on the right hand side of their page to check what they do
-  on their website.</li>
-  <li>Contact the authority by phone or email to ask if they hold the kind of
-  information you're after.</li>
-  <li>Don't worry excessively about getting the right authority. If you get it
-  wrong, they ought to advise you who to make the request to instead.
-  </li>
-  <li>If you've got a thorny case, please <a href="<%= help_contact_path %>">contact us</a> for help.</li>
+  <li>Shaka kuri Sobanukirwa ibibazo bisa n’icyawe.</li>
+  <li>Ni umara kubona umuyobozi utekereza ko ashobora kuba afite amakuru, koresha akayoboro kari ku ruhande rw’iburyo kuri paji yabo kakugeza “ahabanza” kugirango urebe ku rubuga rwabo ibyo bakora. </li>
+  <li>Hamagara umuyoozi kuri telefoni cyangwa imeli ubabaze niba bafite amakuru wifuza.</li>
+  <li>Ntiwigore cyane ushaka umuyobozi nyawe wabaza amakuru. Ubajije uwo bitareba yakugira inama ya mugenzi we wabaza.</li>
+  <li>Niba ikibazo cyawe kigoye, <a href="<%= help_contact_path %>">twandikire</a> tugufashe.</li>
   </ul>
 
   </dd>
 
 
 
-  <dt id="missing_body">You're missing the public authority that I want to request from! <a href="#missing_body">#</a> </dt>
+  <dt id="missing_body">Umuyobozi nshaka kubaza ntabwo ari hano! <a href="#missing_body">#</a> </dt>
 
   <dd>
-  <p>Please <a href="<%= new_change_request_path %>">contact us</a> with the name of the public authority and,
-  if you can find it, their contact email address for access to information requests.
+  <p><a href="<%= new_change_request_path %>">Twandikire</a> amazina y’umuyobozi, na imeli akoresha mu gusubiza ibibazo by’ubwisanzure bwo kumenya amakuru niba wayibona. 
   </p>
-  <p>If you'd like to help add a whole category of public authority to the site, we'd love
-  to hear from you too.
+  <p>Niba wifuza kwongera urwego rw’abayobozi kuri uru rubuga, byatunezeza ubatugejejeho.
   </p>
 
   </dd>
 
-  <dt id="focused">Why must I keep my request focused?<a href="#focused">#</a> </dt>
+  <dt id="focused">Kubera iki ngomba kurasa ku ntego mu kibazo cyanjye?<a href="#focused">#</a> </dt>
 
   <dd>
 
   <p>
-  Please put in your request only what is needed so that someone can
-  easily identify what information you are asking for. Please do
-  <i>not</i> include any of the following:
+  Mu kibazo cyawe, andika ibyo ukeneye gusa kugirango umuntu abashe guhita abona amakuru uri kubaza kandi mu buryo bworoshye. Mu kibazo cyawe <i>ntugire na kimwe ushyiramo</i> muri ibi bikurikira:
   </p>
 
   <ul>
-  <li>arguments about your cause</li>
-  <li>statements that could defame or insult others</li>
+  <li>Ibisobanuro ku kibazo cyawe</li>
+  <li>Amagambo asebanya cyangwa atuka abandi</li>
   </ul>
 
   <p>
-  If you do, we may have to remove your request to avoid problems with
-  libel law, which is a pain for both you and us. Short, succinct messages
-  make it easier for authorities to be clear what information you are
-  requesting, which means you will get a reply more quickly.
+  Ni ushyiramo kimwe muri ibi, dushobora gukuraho ikibazo cyawe kugirango twirinde ibibazo, kandi ibi byatuvuna twembi. Ubutumwa bugufi, kandi burasa ku ntego butuma byorohera abayobozi guhita bamenya amakuru wifuza kumenya, bivuze ko uzahita ubona igisubizo cyihuse.
   </p>
 
   <p>
-  If you want information to support an argument or campaign, access to information is a powerful tool. 
-  Although you may not use this site to run your campaign, we encourage you to use it to get the 
-  information you need. We also encourage to run your campaign elsewhere - one effective
-  and very easy way is to <%= link_to 'start your own blog',
-  "http://wordpress.com/"%>. You are welcome to link to your campaign
-  from this site in an annotation to your request (you can make
-  annotations after submitting the request).
+  Niba ushaka amakuru yo gushyigikira igitekerezo runaka cyangwa kwamamaza, urubuga rw’ubwisanzure bwo kumenya amakuru rwagufasha cyane. N’ubwo utarukoresha wiyamamaza, twagushishikariza kurukoresha kugirango ubone amakuru wifuza. Turagushishikariza kwiyamamariza ahandi – uburyo bumwe bworoshye kandi bwizewe ni ugutangira <%= link_to 'start your own blog',
+  "urubuga rwawe rw’amakuru agezweho"%>. Ushobora kuvuga ku kwiyamamaza kwawe kuri uru rubuga ubinyujije mu bisobanuro by’ikibazo cyawe (ushobora kwongeraho ibisobanuro nyuma yo kwohereza ikibazo).
   </p>
 
   </dd>
 
-  <dt id="fees">Does it cost me anything to make a request?<a href="#fees">#</a> </dt>
+  <dt id="fees">Ese kubaza ibibazo birishyurwa?<a href="#fees">#</a> </dt>
 
   <dd>
 
-  <p>Making an ATI request is nearly always free. The ministerial orders state that "the provision of the 
-  information shall be free of charge" but they also state that "charges for making copies or sending information 
-  may be charged to the applicant" if the applicant does not "bring necessary equipment or tools to collect 
-  the required information".</p>
+  <p>Gutanga ikibazo cy’ubwisanzure bwo kumenya amakuru bisa nk’aho ari ubuntu buri gihe. Itegeko rya Minisitiri riravuga ngo ‘Gutanga amakuru ntibigomba kwishyurwa’ ariko nanone rikavuga ngo "uwasabye amakuru ashobora kwishyuzwa amafaranga yo gufotoza cyangwa kwohererezwa kopi z’amadosiye yifuza’ mu gihe “atazanye ibikoresho bikenewe byo kuba yatwaraho ayo makuru yasabye."</p>
 
   </dd>
 
 
 
-  <dt id="quickly_response">How quickly will I get a response? <a href="#quickly_response">#</a> </dt>
+  <dt id="quickly_response">Nzahabwa igisubizo mu gihe kingana iki? <a href="#quickly_response">#</a> </dt>
 
   <dd>
-  <p>By law, public authorities must respond <strong>promptly</strong> to
-  requests, normally within <strong>three days</strong>.
+  <p>Mu mategeko, abayobozi bagomba <strong>guhita</strong> basubiza ibibazo, mu bisanzwe mu gihe cy’iminsi <strong>itatu</strong>.
   </p>
 
-  <p>Sobanukirwa will email you if you don't get a timely response.  You can
-  then send the public authority a message to remind them, and tell them if they
-  are breaking the law.</p>
+  <p>Sobanukirwa izakoherereza imeli ni uramuka utinze guhabwa igisubizo. Ushobora kwoherereza ubutumwa umuyobozi umwibutsa, cyangwa se umubwira ko atakurikije amategeko.</p>
 
   </dd>
 
-  <dt id="no_response">What if I never get a response?<a href="#no_response">#</a> </dt>
+  <dt id="no_response">Byagenda gute ndamutse ntabonye igisubizo?<a href="#no_response">#</a> </dt>
 
   <dd>
-  <p>There are several things you can do if you never get a response.</p>
+  <p>Hari ibintu byinshi ushobora gukora mu gihe udahawe igisubizo.</p>
   <ul>
-      <li>Sometimes there has been a genuine problem and the authority never
-      received the request. It is worth telephoning the authority and politely
-      checking that they received the request. It was sent to them by email.
+      <li>Rimwe na rimwe, hashobora kuba habayeho imbogamizi maze umuyobozi ntabone ikibazo cyawe. Byaba byiza uhamagaye umuyobozi ukamubaza mu kinyabupfura niba yarakiriye ikibazo cyawe. Bayohererejwe kuri imeli. 
       </li>
-      <li>If they have not received it, the problem is most likely due to
-      "spam filters". Refer the authority to the measures in the answer
-      '<a href="<%= help_officers_path(:anchor => 'spam_problems') %>">I can see a request on Sobanukirwa, but we never got it by email!</a>'
-      in the information officers section of this help.
+      <li>Niba batarakibonye, bishobora kuba byaraturutse kuri “muyunguruzi wa sipamu”. Bwira umuyobozi ingamba zivugwa mu gisubizo
+      '<a href="<%= help_officers_path(:anchor => 'spam_problems') %>">Hari ikibazo ndi kubona kuri Sobanukirwa, ariko ntitwigeze tukibona kuri imeli!</a>'. Mu gice cyo mu bufasha kivuga ku mukozi ushinzwe gutanga amakuru. 
       </li>
-      <li>If you're still having no luck, then you can complain to the <a href="http://www.ombudsman.gov.rw/?How-to-complain">Office of the Ombudsman</a> about the authority.
-      Read our page '<a href="<%= help_general_path(:action => 'unhappy') %>">Unhappy about the response you got?</a>'.
+      <li>Niba n’ubu utarasubizwa, ushobora gutanga ikibazo kuri uwo muyobozi mu <a href="http://www.ombudsman.gov.rw/?How-to-complain">biro by’umwunzi</a>.
+      Soma paji yacu '<a href="<%= help_general_path(:action => 'unhappy') %>">Ntiwishimiye igisubizo wahawe?</a>'.
   </ul>
   </dd>
 
-  <dt id="not_satifised">What if I'm not satisfied with the response? <a href="#not_satifised">#</a> </dt>
-  <dd>If you didn't get the information you asked for, or you didn't get it in time,
-  then read our page '<a href="<%= help_general_path(:action => 'unhappy') %>">Unhappy about the response you got?</a>'.
+  <dt id="not_satifised">Ndamutse ntishimiye igisubizo? <a href="#not_satifised">#</a> </dt>
+  <dd>Niba utahawe amakuru wasabye, cyangwa se utarayaboneye igihe, soma paji yacu '<a href="<%= help_general_path(:action => 'unhappy') %>">Ntiwishimiye igisubizo wahawe?</a>'.
   </dd>
 
-  <dt id="data_protection">Can I request information about myself? <a href="#data_protection">#</a> </dt>
+  <dt id="data_protection">Nshobora gusaba amakuru anyerekeyeho? <a href="#data_protection">#</a> </dt>
 
   <dd>
-  <p>No. Requests made using Sobanukirwa are public, made under the access to information law, 
-  and cannot help you find information about a private individual.</p>
+  <p>Oya. Ibibazo byatanzwe kuri Sobanukirwa biba biri ku mugaragaro, byatanzwe hakurikjwe itegeko ry’ubwisanzure bwo kumenya amakuru, kandi ntibishobora kugufasha mu gushaka amakuru ku muntu ku giti.</p>
 
-  <p>If you see that somebody has included personal information, perhaps
-  unwittingly, in a request, please <a href="<%= help_contact_path %>">contact us</a>
-  immediately so we can remove it.</p>
+  <p>Ni ubona umuntu washyize mu kibazo umwirondoro we, wenda yabikoze atabishaka, uhite <a href="<%= help_contact_path %>">utumenyesha</a> ako kanya kugirango tuwukureho. 
+</p>
   </dd>
 
 
-  <dt id="private_requests">I'd like to keep my request secret! (At least until I publish my story) <a href="#private_requests">#</a> </dt>
+  <dt id="private_requests">Ndifuza ko ikibazo cyanjye kiba ibanga! (Byibura kugeza igihe nzashyirira ahagaragara inkuru yanjye) <a href="#private_requests">#</a> </dt>
 
-  <dd><p>Sobanukirwa is currently only designed for public requests. All
-  responses that we receive are automatically published on the website for anyone
-  to read.  </p>
-  <p>You should contact the public authority directly if you would like to
-  make a request in private.  If you're interested in buying a system which helps
-  you manage information requests in secret, then <a href="<%= help_contact_path %>">contact us</a>.
+  <dd><p>Ubu Sobanukirwa yashyiriweho ibibazo rusange. Ibisubizo byose twakira bihita bishyirwa ku mugaragaro ku rubuga rwa interineti ku buryo buri wese ashobora kubisoma. </p>
+  <p>Ugomba kuvugisha umuyobozi niba wifuza gutanga ikibazo mu ibanga. Niba wifuza kugura uburyo bwagufasha kugenzura amakuru y’ibibazo mu ibanga, <a href="<%= help_contact_path %>">watwandikira</a>.
   </p>
   </dd>
 
-  <dt id="multiple">Can I make the same request to lots of authorities, e.g. all sectors? <a href="#multiple">#</a> </dt>
+  <dt id="multiple">Ese nshobora kubaza ikibazo kimwe abayobozi benshi, urugero: inzego zose? <a href="#multiple">#</a> </dt>
 
-  <dd>We ask you to first send a test version of your request to a few
-  authorities. Their responses will help you improve the wording of your request,
-  so that you get the best information when you send the request to all of
-  the authorities. There is currently no automated system for sending the request
-  to the other authorities, you must copy and paste it by hand.
+  <dd>Turabanza tukagusaba kwoherereza ikibazo abayobozi bacye kugirango ugerageze. Ibisubizo byabo bizagufasha guhindura amagambo ukoresha mu kibazo cyawe, kugirango ubone amakuru yuzuye ni ujya kucyoherereza abayobozi bose. Ubu nta buryo buriho bwo guhita woherereza abandi bayobozi ikibazo, ugomba kucyandukura.
 
   </dd>
 
-  <dt id="offsite">I made a request off the site, how do I upload it to the archive?<a href="#offsite">#</a> </dt>
+  <dt id="offsite">Nakuye ikibazo ku rubuga, ni gute nakibika mu bushyinguro bw’inyandiko?<a href="#offsite">#</a> </dt>
 
-  <dd>Sobanukirwa is an archive of requests made through the site,
-  and does not try to be an archive of all ATI requests. We'll never support uploading
-  other requests. For one thing, we wouldn't be able to verify that other
-  responses actually came from the authority. If this really matters to you,
-  you can always make the same request again via Sobanukirwa.
+  <dd>Sobanukirwa ni ubushyinguro bw’ibibazo byose byabajijwe hakoreshejwe uru rubuga, kandi ntigerageza kuba ubushyinguro bw’ibibazo byose by’bwisanzure bwo kumenya amakuru. Ntabwo twakwakira ibibazo wakuye ahandi. Ibi ni ukubera impamvu imwe, ni uko tudashobora kugenzura niba igisubizo cyaratanzwe n’umuyobozi. Niba iki kibazo gifite agaciro kenshi, ushobora kwongera kukibaza ukoresheje Sobanukirwa. 
   </dd>
 
-  <dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a> </dt>
+  <dt id="moderation">Ni gute ugenzura ibisobanuro byatanzwe ku bibazo? <a href="#moderation">#</a> </dt>
 
   <dd>
-  <p>Annotations on Sobanukirwa are to help
-  people get the information they want, or to give them pointers to places they
-  can go to help them act on it. We reserve the right to remove anything else.
+  <p>Ibisobanuro byo kuri sobanukirwa bifasha abantu kubona amakuru basabye, cyangwa se kubatungira agatoki aho bashobora kujya kugirango bagire icyo babikoraho. Dufite uburenganzira bwo gukuraho ikintu icyo aricyo cyose.
   </p>
-  <p>Endless, political discussions are not allowed.
-  Post a link to a suitable forum or campaign site elsewhere.</p>
+  <p>Impaka z’urudaca za politiki ntabwo zemewe. Shyiraho akayoboro ku rundi rubuga ahandi.</p>
   <dd>
 
   </dl>
 
-  <p><strong>Next</strong>, read about <a href="<%= help_privacy_path %>">your privacy</a> --&gt;
+  <p><strong>Ibikurikira</strong>, soma ibijyanye <a href="<%= help_privacy_path %>">n’ubuzima bwawe bwite</a> --&gt;
 
   <div id="hash_link_padding"></div>
 </div>
